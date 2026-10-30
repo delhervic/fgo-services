@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FGO · Páginas web y captación de clientes</title>
+<meta name="description" content="FGO diseña páginas web y landing pages que traen clientes por WhatsApp, y opera tus campañas en Meta. Ves tu página antes de decidir. Guadalajara, México.">
+<meta name="theme-color" content="#0F3D4A">
+<meta property="og:title" content="FGO · Páginas web y captación de clientes">
+<meta property="og:description" content="Páginas web, landing pages y campañas en Meta, ejecutadas hasta dejarlas funcionando bajo tu control.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/Sora-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Sora;font-weight:600;font-display:swap;src:url(fonts/Sora-600.woff2) format("woff2")}
+@font-face{font-family:Sora;font-weight:700;font-display:swap;src:url(fonts/Sora-700.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/Inter-400.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:500;font-display:swap;src:url(fonts/Inter-500.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/Inter-600.woff2) format("woff2")}
+:root{
+  --petroleo:#0F3D4A; --petroleo-osc:#0A2C36; --teal:#1B7A7A; --lima:#A3E635;
+  --grafito:#1F2933; --gris:#6B7280; --humo:#F7F9FA; --blanco:#FFFFFF; --linea:#E1E7EB;
+  --sora:Sora,"Segoe UI",system-ui,sans-serif; --inter:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1160px; --pad:20px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--blanco);color:var(--grafito);font:400 17px/1.6 var(--inter);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--sora);margin:0;line-height:1.12;letter-spacing:-.01em;color:var(--petroleo)}
+h1{font-weight:700;font-size:clamp(32px,min(6.4vw,8.6vh),58px)}
+h2{font-weight:600;font-size:clamp(28px,3.6vw,40px)}
+h3{font-weight:600;font-size:20px;line-height:1.3}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+:focus-visible{outline:3px solid var(--lima);outline-offset:3px;border-radius:6px}
+section{scroll-margin-top:76px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:10px;border:0;
+  background:var(--petroleo);color:#fff;font:600 16px/1 var(--inter);text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .2s}
+.btn:hover{background:var(--petroleo-osc)}
+.btn-wa{background:#1FAF55}.btn-wa:hover{background:#178a43}
+.btn-sec{background:transparent;color:var(--petroleo);box-shadow:inset 0 0 0 1.5px var(--petroleo)}
+.btn-sec:hover{background:var(--petroleo);color:#fff}
+.btn-claro{background:#fff;color:var(--petroleo)}.btn-claro:hover{background:var(--humo)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* Encabezado */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+header .wrap{display:flex;align-items:center;gap:24px;height:68px}
+.logo{display:flex;align-items:center;margin-right:auto}
+.logo img{height:30px;width:auto}
+header nav{display:none}
+header nav a{text-decoration:none;font-weight:500;font-size:15px;color:var(--grafito);padding:10px 2px}
+header nav a:hover{color:var(--teal)}
+header .btn{min-height:44px;padding:0 18px;font-size:15px}
+
+/* Portada */
+.hero{background:var(--petroleo);color:#fff;overflow:hidden;position:relative}
+.hero .wrap{display:grid;gap:40px;padding-top:48px;padding-bottom:56px}
+.hero h1{color:#fff;max-width:17ch;text-wrap:balance}
+.hero .sub{margin-top:18px;font-size:18px;line-height:1.55;color:#D3E2E6;max-width:48ch}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.hero .nota{margin-top:20px;font-size:14.5px;color:#A9C2C9;display:flex;gap:10px;align-items:flex-start;max-width:46ch}
+.nodo{flex:none;width:10px;height:10px;border-radius:50%;background:var(--lima);margin-top:7px;box-shadow:0 0 0 4px rgba(163,230,53,.18)}
+.muestra{position:relative;align-self:center}
+.navegador{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.navegador .barra{display:flex;gap:6px;align-items:center;height:28px;padding:0 12px;background:#E9EEF1}
+.navegador .barra i{width:9px;height:9px;border-radius:50%;background:#C5CED4}
+.navegador img{width:100%;height:auto}
+.telefono{position:absolute;right:-6px;bottom:-26px;width:31%;max-width:170px;border-radius:22px;border:6px solid #0B1F27;overflow:hidden;background:#000;box-shadow:0 24px 50px rgba(0,0,0,.45)}
+.telefono img{width:100%;height:auto}
+.muestra figcaption{margin-top:40px;font-size:14px;color:#A9C2C9;max-width:62%}
+.muestra figcaption b{color:#fff;font-weight:600}
+
+/* Secciones */
+.bloque{padding:72px 0}
+.humo{background:var(--humo)}
+.cabeza{max-width:640px}
+.cabeza p{margin-top:14px;color:var(--gris);font-size:17.5px}
+
+/* Servicios */
+.servicios{display:grid;gap:20px;margin-top:36px}
+.servicio{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(15,61,74,.04)}
+.servicio .etiqueta{align-self:flex-start;font:600 13px/1 var(--inter);color:var(--teal);background:#E6F2F2;padding:7px 10px;border-radius:999px;margin-bottom:14px}
+.servicio .price{margin-top:14px;font:700 34px/1.1 var(--sora);color:var(--petroleo)}
+.servicio .price small{display:block;font:500 14px/1.4 var(--inter);color:var(--gris);margin-top:6px}
+.servicio .desc{margin-top:14px;color:var(--grafito)}
+.servicio ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.servicio li{display:flex;gap:10px;font-size:15.5px}
+.servicio li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--teal)}
+.servicio .btn{margin-top:auto}
+.servicio .pie{margin-top:22px}
+.servicio.destacado{border:2px solid var(--petroleo)}
+.letra{margin-top:24px;font-size:14.5px;color:var(--gris);max-width:70ch}
+
+/* Proyecto */
+.proyecto{display:grid;gap:28px;margin-top:36px;align-items:center}
+.galeria{display:grid;gap:16px;margin:0}
+.galeria .navegador{box-shadow:0 18px 44px rgba(15,61,74,.18)}
+.galeria figcaption{font-size:14px;color:var(--gris)}
+.proyecto .estado{display:inline-flex;align-items:center;gap:8px;font:600 13.5px var(--inter);color:var(--teal)}
+.proyecto .estado .nodo{margin-top:0}
+.proyecto h3{font-size:26px;margin-top:10px}
+.proyecto .texto>p{margin-top:14px;color:var(--grafito);max-width:54ch}
+.proyecto dl{margin:22px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.proyecto dt{font:700 26px/1 var(--sora);color:var(--petroleo)}
+.proyecto dd{margin:6px 0 0;font-size:14.5px;color:var(--gris)}
+.proyecto .btn{margin-top:26px}
+
+/* Ruta de trabajo */
+.ruta{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:0;position:relative}
+.ruta li{position:relative;padding:0 0 32px 44px}
+.ruta li::before{content:"";position:absolute;left:9px;top:12px;bottom:-12px;width:2px;background:var(--linea)}
+.ruta li:last-child{padding-bottom:0}
+.ruta li:last-child::before{display:none}
+.ruta .punto{position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:50%;background:#fff;border:2px solid var(--teal);display:grid;place-items:center}
+.ruta li.activo .punto{border-color:var(--lima);background:var(--lima)}
+.ruta h3{font-size:19px}
+.ruta p{margin-top:6px;color:var(--gris);max-width:52ch}
+
+/* Quién */
+.quien .wrap{display:grid;gap:32px;align-items:center}
+.quien .foto{margin:0;border-radius:16px;overflow:hidden;max-width:360px;aspect-ratio:4/5;background:#D8E1E5}
+.quien .foto img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.quien .texto>p{margin-top:16px;max-width:56ch}
+.quien .firma{margin-top:20px;font:600 16px var(--inter);color:var(--petroleo)}
+.quien .firma span{display:block;font-weight:400;color:var(--gris);font-size:15px}
+.garantias{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.garantias li{display:flex;gap:12px;align-items:flex-start}
+.garantias svg{flex:none;width:20px;height:20px;margin-top:2px;color:var(--teal)}
+
+/* Preguntas */
+.faq{margin-top:32px;max-width:760px;display:grid;gap:12px}
+.faq details{background:#fff;border:1px solid var(--linea);border-radius:12px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 20px;font:600 16.5px/1.4 var(--inter);color:var(--petroleo);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:10px;height:10px;border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{padding:0 20px 18px;color:var(--grafito)}
+
+/* Cierre */
+.final{background:var(--petroleo);color:#fff;padding:72px 0}
+.final h2{color:#fff;max-width:20ch}
+.final p{margin-top:16px;color:#D3E2E6;max-width:52ch}
+.final .acciones{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.final .contacto{margin-top:22px;font-size:15px;color:#A9C2C9}
+.final .contacto a{color:#fff;font-weight:600}
+footer{background:var(--petroleo-osc);color:#A9C2C9;font-size:14px;padding:32px 0 calc(100px + env(safe-area-inset-bottom))}
+footer .wrap{display:grid;gap:14px}
+footer img{height:26px;width:auto}
+footer .eslogan{font:600 15px var(--sora);color:#fff}
+footer .eslogan b{color:var(--lima);font-weight:600}
+
+/* Botón fijo en celular */
+.sticky{position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;
+  transform:translateY(calc(100% + 40px + env(safe-area-inset-bottom)));opacity:0;visibility:hidden;transition:transform .3s,opacity .25s,visibility 0s .3s}
+.sticky.show{transform:none;opacity:1;visibility:visible;transition:transform .3s,opacity .25s}
+.sticky .btn{width:100%;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+
+@media (min-width:760px){
+  :root{--pad:32px}
+  .servicios{grid-template-columns:1fr 1fr}
+  .servicio.destacado{grid-column:1/-1}
+  .proyecto dl{grid-template-columns:repeat(4,1fr)}
+  .quien .wrap{grid-template-columns:300px 1fr;gap:48px}
+  .sticky{left:auto;right:24px;width:320px}
+}
+@media (min-width:1080px){
+  header nav{display:flex;gap:28px}
+  .hero .wrap{grid-template-columns:1fr 1.05fr;gap:56px;padding-top:72px;padding-bottom:84px;align-items:center}
+  .bloque{padding:100px 0}
+  .servicios{grid-template-columns:repeat(3,1fr)}
+  .servicio.destacado{grid-column:auto}
+  .proyecto{grid-template-columns:1.1fr 1fr;gap:56px}
+  .proyecto dl{grid-template-columns:1fr 1fr}
+  .flujo{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+  .flujo .ruta{margin-top:6px}
+  .quien .wrap{grid-template-columns:360px 1fr;gap:72px}
+  .final .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:end}
+  .final .acciones{justify-content:flex-end;margin-top:0}
+  .sticky{display:none}
+  footer{padding-bottom:36px}
+  footer .wrap{grid-template-columns:auto 1fr auto;align-items:center;gap:32px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="FGO, inicio"><img src="img/logo-petroleo.png" alt="FGO" width="979" height="337"></a>
+    <nav aria-label="Secciones">
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#quien">Quién está detrás</a>
+    </nav>
+    <a class="btn" href="#contacto">Cotizar</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1>Tu página web y tus campañas, funcionando y bajo tu control.</h1>
+      <p class="sub">En FGO diseñamos páginas web y landing pages que traen clientes por WhatsApp, y operamos tus anuncios en Facebook e Instagram. Nos encargamos de todo hasta dejarlo funcionando.</p>
+      <div class="acciones">
+        <a class="btn btn-wa wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Escríbenos por WhatsApp</a>
+        <a class="btn btn-claro" href="#servicios">Ver servicios y precios</a>
+      </div>
+      <p class="nota"><span class="nodo" aria-hidden="true"></span><span>Antes de decidir, ves cómo quedaría tu página con tu logo y tus datos.</span></p>
+    </div>
+    <figure class="muestra" style="margin:0">
+      <div class="navegador"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="img/omex-escritorio.jpg" alt="Página de inicio de OMEX Alimentaria en computadora" width="1350" height="640" fetchpriority="high"></div>
+      <div class="telefono"><img src="img/omex-celular.jpg" alt="Página de OMEX Alimentaria en celular" width="375" height="640"></div>
+      <figcaption><b>OMEX Alimentaria.</b> Sitio corporativo hecho por FGO, en computadora y celular.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="bloque humo" id="servicios">
+  <div class="wrap">
+    <div class="cabeza">
+      <h2>Servicios y precios</h2>
+      <p>Empieza por lo que tu negocio necesita hoy. Todos incluyen diseño para celular y computadora y botón directo a tu WhatsApp.</p>
+    </div>
+    <div class="servicios">
+      <article class="servicio">
+        <h3>Landing page</h3>
+        <div class="price">$2,500<small>MXN, precio desde</small></div>
+        <p class="desc">Una sola página para vender un producto o servicio concreto. El precio final depende de lo que vendas y de cuántas secciones necesite.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Textos pensados para que te escriban</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Lista para conectar a tus anuncios</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Publicada sin mensualidad de hosting</li>
+        </ul>
+        <div class="pie"><a class="btn btn-sec wa" data-msg="Hola, me interesa una landing page." href="#" target="_blank" rel="noopener">Cotizar landing</a></div>
+      </article>
+      <article class="servicio">
+        <h3>Página web</h3>
+        <div class="price">$4,500<small>MXN, precio desde</small></div>
+        <p class="desc">El sitio completo de tu negocio: quiénes son, servicios, precios, galería, ubicación y contacto, conectado a tu dominio.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Con tus fotos, tu logo y tus precios</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>En español e inglés si tus clientes lo necesitan</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Queda 100% a tu nombre</li>
+        </ul>
+        <div class="pie"><a class="btn btn-sec wa" data-msg="Hola, me interesa una página web para mi negocio." href="#" target="_blank" rel="noopener">Cotizar página web</a></div>
+      </article>
+      <article class="servicio destacado">
+        <span class="etiqueta">Para conseguir clientes cada mes</span>
+        <h3>Sistema de captación</h3>
+        <div class="price">$12,000<small>MXN de implementación, desde<br>+ $2,500 MXN al mes de administración</small></div>
+        <p class="desc">Tu landing page conectada a anuncios en Facebook e Instagram, con los creativos, la campaña y el seguimiento de cada mes.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Landing page con píxel de Meta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Diseño de los anuncios y configuración de la campaña</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Administración y reporte mensual</li>
+        </ul>
+        <div class="pie"><a class="btn wa" data-msg="Hola, me interesa el sistema de captación de clientes." href="#" target="_blank" rel="noopener">Cotizar sistema</a></div>
+      </article>
+    </div>
+    <p class="letra">Precios en pesos mexicanos, más IVA. Facturamos. En el sistema de captación, el presupuesto de los anuncios lo pagas tú directo a Meta y la administración es por un mínimo de 3 meses.</p>
+  </div>
+</section>
+
+<section class="bloque" id="proyectos">
+  <div class="wrap">
+    <div class="cabeza">
+      <h2>Proyectos</h2>
+      <p>Trabajo real, publicado y funcionando.</p>
+    </div>
+    <div class="proyecto">
+      <figure class="galeria">
+        <div class="navegador"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img loading="lazy" src="img/omex-marca.jpg" alt="Página de la marca El Mexicano dentro del sitio de OMEX Alimentaria" width="1350" height="640"></div>
+        <div class="navegador"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img loading="lazy" src="img/omex-distribuidores.jpg" alt="Página de distribuidores de OMEX Alimentaria" width="1350" height="505"></div>
+        <figcaption>Página de una de sus marcas y página de distribuidores.</figcaption>
+      </figure>
+      <div class="texto">
+        <span class="estado"><span class="nodo" aria-hidden="true"></span>Proyecto entregado</span>
+        <h3>OMEX Alimentaria</h3>
+        <p>Sitio corporativo para una empresa mexicana de carnes frías, embutidos, quesos, lácteos y botanas, con más de 35 años en el mercado. Cada una de sus marcas tiene su propia página, y el sitio reúne el catálogo comercial descargable, la red de distribuidores, la bolsa de trabajo y el contacto comercial.</p>
+        <dl>
+          <div><dt>7</dt><dd>marcas, cada una con su página</dd></div>
+          <div><dt>27</dt><dd>estados con distribuidores</dd></div>
+          <div><dt>8</dt><dd>centros de distribución</dd></div>
+          <div><dt>1</dt><dd>catálogo comercial descargable</dd></div>
+        </dl>
+        <a class="btn btn-sec" href="https://omex-prototipo.delhervic.workers.dev/" target="_blank" rel="noopener">Ver el sitio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque humo" id="como-trabajamos">
+  <div class="wrap flujo">
+    <div class="cabeza">
+      <h2>Cómo trabajamos</h2>
+      <p>Un proceso corto y claro, para que siempre sepas en qué va tu proyecto y qué sigue.</p>
+    </div>
+    <ol class="ruta">
+      <li><span class="punto" aria-hidden="true"></span><h3>Diagnóstico</h3><p>Revisamos tu negocio, lo que ya tienes en línea y qué necesitas que haga tu página.</p></li>
+      <li><span class="punto" aria-hidden="true"></span><h3>Propuesta visual</h3><p>Te mostramos cómo quedaría tu página con tu logo y tus datos antes de que decidas.</p></li>
+      <li><span class="punto" aria-hidden="true"></span><h3>Ejecución</h3><p>Con el 50% de anticipo la armamos con tus fotos, textos y precios. Tú la revisas y pides una ronda de ajustes.</p></li>
+      <li class="activo"><span class="punto" aria-hidden="true"></span><h3>Entrega bajo tu control</h3><p>Al pagar el 50% restante la publicamos en tu dominio y en cuentas a tu nombre. Te explicamos cómo funciona todo.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloque quien" id="quien">
+  <div class="wrap">
+    <figure class="foto"><img loading="lazy" src="img/victor-delgadillo.jpg" alt="Víctor Delgadillo, fundador de FGO" width="853" height="1280"></figure>
+    <div class="texto">
+      <h2>Quién está detrás</h2>
+      <p>FGO nació para que los negocios en crecimiento tengan a alguien que ejecute las mejoras que no alcanzan a operar por su cuenta. Empezamos por lo que más rápido se nota en las ventas: la página web y los anuncios.</p>
+      <p>Hablas directo con quien hace tu proyecto, desde la primera llamada hasta la entrega.</p>
+      <p class="firma">Víctor Delgadillo<span>Fundador de FGO, Guadalajara</span></p>
+      <ul class="garantias">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Facturamos todos nuestros servicios.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Trabajamos en remoto con negocios de todo México; si prefieres, nos vemos por videollamada o en persona.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tu página, tu dominio y tus cuentas quedan a tu nombre.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloque humo" id="preguntas">
+  <div class="wrap">
+    <div class="cabeza"><h2>Preguntas frecuentes</h2></div>
+    <div class="faq">
+      <details><summary>¿Tengo que pagar hosting cada mes?</summary><p>No. Dejamos tu página publicada en una cuenta a tu nombre sin costo mensual de hosting. Lo único que pagas cada año es tu dominio, directo al proveedor.</p></details>
+      <details><summary>¿Cuánto tarda mi página?</summary><p>Una página web queda lista en 2 a 3 días a partir de que nos envías tus fotos, tu logo y tus textos. Los proyectos con campañas toman más tiempo porque incluyen la preparación de los anuncios.</p></details>
+      <details><summary>¿Cómo se paga?</summary><p>50% para empezar y 50% al entregar. Facturamos; a los precios se les suma el IVA.</p></details>
+      <details><summary>¿Qué pasa si no me gusta la propuesta?</summary><p>La propuesta visual es para que decidas con calma. Si no te convence, no hay compromiso. Una vez que empezamos, tienes una ronda de ajustes incluida.</p></details>
+      <details><summary>¿Quién paga los anuncios?</summary><p>Tú, directo a Meta y con tu propia tarjeta, para que siempre tengas el control del presupuesto. Nosotros cobramos solo la implementación y la administración.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>Platícanos qué necesita tu negocio</h2>
+      <p>Te respondemos por WhatsApp con una propuesta y un precio claro.</p>
+      <p class="contacto"><a href="mailto:fgo.services.mx@gmail.com">fgo.services.mx@gmail.com</a><br><a href="tel:+523320276936">33 2027 6936</a></p>
+    </div>
+    <div class="acciones">
+      <a class="btn btn-wa wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Escríbenos por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-blanco.png" alt="FGO" width="979" height="337">
+    <p>Fractional Growth Operator. Páginas web, landing pages y campañas en Meta para negocios en crecimiento.</p>
+    <p class="eslogan">Resolver. Mejorar. <b>Crecer.</b></p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn btn-wa wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#wa"/></svg>Escríbenos por WhatsApp</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <path id="wa" fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/>
+</defs></svg>
+
+<script>
+const WA = '523320276936';
+const MSG = 'Hola, vi su página y me gustaría información para mi negocio.';
+document.querySelectorAll('a.wa').forEach(a => { a.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(a.dataset.msg || MSG); });
+// Botón fijo en celular: aparece después de la portada y se esconde en el cierre
+const sticky = document.getElementById('sticky'); let pasoPortada = false, enCierre = false;
+const upd = () => sticky.classList.toggle('show', pasoPortada && !enCierre);
+new IntersectionObserver(([e]) => { pasoPortada = !e.isIntersecting && e.boundingClientRect.top < 0; upd(); }).observe(document.getElementById('inicio'));
+new IntersectionObserver(([e]) => { enCierre = e.isIntersecting; upd(); }, { rootMargin: '0px 0px 40px 0px' }).observe(document.getElementById('contacto'));
+</script>
+</body>
+</html>
