@@ -131,6 +131,10 @@ header .btn:hover{background:var(--humo)}
 .quien .texto>p{margin-top:16px;max-width:56ch}
 .quien .firma{margin-top:20px;font:600 16px var(--inter);color:var(--petroleo)}
 .quien .firma span{display:block;font-weight:400;color:var(--gris);font-size:15px}
+.red{display:inline-flex;align-items:center;gap:8px;min-height:44px;text-decoration:none;font-weight:600;color:var(--teal)}
+.red svg{width:20px;height:20px;flex:none}
+.red:hover{text-decoration:underline}
+.quien .red{margin-top:6px}
 .garantias{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
 .garantias li{display:flex;gap:12px;align-items:flex-start}
 .garantias svg{flex:none;width:20px;height:20px;margin-top:2px;color:var(--teal)}
@@ -156,6 +160,7 @@ footer .wrap{display:grid;gap:14px}
 footer img{height:26px;width:auto}
 footer .eslogan{font:600 15px var(--sora);color:#fff}
 footer .eslogan b{color:var(--lima);font-weight:600}
+footer .red{color:#fff;font-weight:500}
 
 /* Botón fijo en celular */
 .sticky{position:fixed;left:12px;right:12px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;
@@ -186,7 +191,7 @@ footer .eslogan b{color:var(--lima);font-weight:600}
   .final .acciones{justify-content:flex-end;margin-top:0}
   .sticky{display:none}
   footer{padding-bottom:36px}
-  footer .wrap{grid-template-columns:auto 1fr auto;align-items:center;gap:32px}
+  footer .wrap{grid-template-columns:auto 1fr auto auto;align-items:center;gap:32px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
 </style>
@@ -325,6 +330,7 @@ footer .eslogan b{color:var(--lima);font-weight:600}
       <p>Soy Víctor Delgadillo, estudiante de Ingeniería en Negocios en la Universidad de Guadalajara y emprendedor desde 2020. Fundé FGO para que los negocios en crecimiento tengan a alguien que ejecute las mejoras que no alcanzan a operar por su cuenta, empezando por lo que más rápido se nota en las ventas: la página web y los anuncios.</p>
       <p>Hablas directo conmigo desde la primera llamada hasta la entrega.</p>
       <p class="firma">Víctor Delgadillo<span>Fundador de FGO, Guadalajara</span></p>
+      <a class="red" href="https://www.instagram.com/victor_roman_dh/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@victor_roman_dh</a>
       <ul class="garantias">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Trabajamos en remoto con negocios de todo México; si prefieres, nos vemos por videollamada o en persona.</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tu página, tu dominio y tus cuentas quedan a tu nombre.</li>
@@ -363,6 +369,7 @@ footer .eslogan b{color:var(--lima);font-weight:600}
   <div class="wrap">
     <img src="img/logo-blanco.png" alt="FGO" width="979" height="337">
     <p>Fractional Growth Operator. Páginas web, landing pages y campañas en Meta para negocios en crecimiento.</p>
+    <a class="red" href="https://www.instagram.com/fgo.services/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@fgo.services</a>
     <p class="eslogan">Resolver. Mejorar. <b>Crecer.</b></p>
   </div>
 </footer>
