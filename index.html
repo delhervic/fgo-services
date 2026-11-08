@@ -89,6 +89,8 @@ header .btn:hover{background:var(--humo)}
 .servicio{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(15,61,74,.04)}
 .servicio .etiqueta{align-self:flex-start;font:600 13px/1 var(--inter);color:var(--teal);background:#E6F2F2;padding:7px 10px;border-radius:999px;margin-bottom:14px}
 .servicio .price{margin-top:14px;font:700 34px/1.1 var(--sora);color:var(--petroleo)}
+.servicio .price del{font-size:.55em;font-weight:600;color:var(--gris);margin-right:6px}
+.servicio .etiqueta.promo{color:var(--petroleo);background:var(--lima)}
 .servicio .price small{display:block;font:500 14px/1.4 var(--inter);color:var(--gris);margin-top:6px}
 .servicio .desc{margin-top:14px;color:var(--grafito)}
 .servicio ul{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
@@ -238,15 +240,16 @@ footer .eslogan b{color:var(--lima);font-weight:600}
     </div>
     <div class="servicios">
       <article class="servicio">
+        <span class="etiqueta promo">Promoción: 50% de descuento</span>
         <h3>Landing page</h3>
-        <div class="price">$2,500<small>MXN, precio desde</small></div>
+        <div class="price"><del>$2,500</del> $1,250<small>MXN por una landing page sencilla</small></div>
         <p class="desc">Una sola página para vender un producto o servicio concreto. El precio final depende de lo que vendas y de cuántas secciones necesite.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Textos pensados para que te escriban</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Lista para conectar a tus anuncios</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Publicada sin mensualidad de hosting</li>
         </ul>
-        <div class="pie"><a class="btn btn-sec wa" data-msg="Hola, me interesa una landing page." href="#" target="_blank" rel="noopener">Cotizar landing</a></div>
+        <div class="pie"><a class="btn btn-sec wa" data-msg="Hola, me interesa la promoción de landing page a $1,250." href="#" target="_blank" rel="noopener">Cotizar landing</a></div>
       </article>
       <article class="servicio">
         <h3>Página web</h3>
